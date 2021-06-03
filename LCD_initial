@@ -1,0 +1,8 @@
+void delayMs (uint32_t) ;
+void delayUs (uint32_t) ;
+void LCD_COMMAND (char com ){
+	GPIO_PORTA_DATA_R =0 ; // Rs=0 , RW= 0 
+	GPIO_PORTB_DATA_R = com ;
+	GPIO_PORTA_DATA_R |= 0X80 ;
+	delayUs(230) ;  
+	GPIO_PORTA_DATA_R = 0;
