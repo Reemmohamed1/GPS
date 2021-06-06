@@ -21,14 +21,19 @@ void LCD_Init (void)
    GPIO_PORTB_PCTL_R &= ~0xFFFFFFFF;            // No Function Selected on PB0-PB7
    GPIO_PORTB_DEN_R |= 0xFF;                    // Enable Digital on PB0-PB7
    GPIO_PORTB_DIR_R |= 0XFF;                    // Set PB0-PB7 to be Outputs (DATA)
+   delay_Ms(20);   
    LCD_command(0x30);                           // WakeUp @LCD
+   delay_Ms(5); 
    LCD_command(0x30);                           // WakeUp @LCD
+   delay_Us(100);  
    LCD_command(0x30);                           // WakeUp @LCD
    LCD_command(0x38);                           // set data to 8-bit, 2-line, 5x7 Character
    LCD_command(0x06);                           // Increment Curser (Shifting it Right)  
    LCD_command(0x01);                           // clear LCD
    LCD_command(0x0F);                           // Display On, cursor blinking or blinking */
  }
+
+
 void portf_init (void)
  {
    GPIO_PORTF_LOCK_R = 0x4C4F434B;              // Unlock PORTF
