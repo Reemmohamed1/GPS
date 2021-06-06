@@ -1,4 +1,6 @@
-
+// main of required functions in first milestone 
+void LCD_command(unsigned char comnd);
+void SystemInit () {};                
 void readGPSModule();
 double latitude = 0, longitude = 0;
 double distance_calc (void);
