@@ -85,10 +85,9 @@ int main(void)
 	     LCD_DATA('E');
 	     LCD_DATA('R');
 	     LCD_DATA('S');
-             LCD_DATA(')');	
-	   
-		
-	     dist = distance_calc();
-	       
+             LCD_DATA(')');
+	       readGPSModule();
+	          dist = distance_calc();
+	           led_on (dist) ;
     } while ((GPIO_PORTF_DATA_R &= 0x01) != 1)	
  }
