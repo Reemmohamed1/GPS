@@ -29,6 +29,17 @@ void LCD_Init (void)
    LCD_command(0x01);                           // clear LCD
    LCD_command(0x0F);                           // Display On, cursor blinking or blinking */
  }
+void portf_init (void)
+ {
+	 GPIO_PORTF_LOCK_R = 0x4C4F434B;              // Unlock PORTF
+   GPIO_PORTF_CR_R |= 0x03;                     // Enable Changing in PORTF Pins 
+   GPIO_PORTF_AMSEL_R &= ~0x03;                 // Disable Analoge on PF0,PF1
+   GPIO_PORTF_AFSEL_R &= ~0x03;                 // Needn't Func. Selection on PF0,PF1
+   GPIO_PORTF_PCTL_R &= ~0x000000FF;            // No Function Selected on PF0,PF1
+   GPIO_PORTF_PUR_R |= 0x01;                    // Enable Pull Up Resistance For Switch 1 as it's Active low 
+   GPIO_PORTF_DEN_R |= 0x03;                    // Enable Digital on PF0,PF1
+   GPIO_PORTF_DIR_R |= 0X02;                    // Set PF0 to be Input,PF1 to be Output 
+ }
  
       
     
