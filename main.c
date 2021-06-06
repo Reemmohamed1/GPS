@@ -1,3 +1,10 @@
+
+void readGPSModule();
+  double latitude = 0, longitude = 0;
+  double distance_calc (void);
+void led_on (double s);
+
+
 int main(void)
  {
 	   double dist = 0;
