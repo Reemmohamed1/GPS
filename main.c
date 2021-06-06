@@ -50,7 +50,8 @@ int main(void)
              delay_Ms(3000);
 	     LCD_command(1);                           // clear LCD
              LCD_command(0x80);                        // Set cursor location to write in first line 
-	     LCD_DATA('D');
+	  do {
+	LCD_DATA('D');
 	     LCD_DATA('I');
 	     LCD_DATA('S');
 	     LCD_DATA('T');
@@ -58,7 +59,8 @@ int main(void)
 	     LCD_DATA('N');
 	     LCD_DATA('C');                            // Display 'DISTANCE=100' 
 	     LCD_DATA('E');
-	     LCD_DATA('=');			 
+	     LCD_DATA('=');
+		  delay_Ms(500);
 	     LCD_DATA('1');
 	     LCD_DATA('0');
 	     LCD_DATA('0');
@@ -66,6 +68,7 @@ int main(void)
 	     LCD_DATA(' ');
 	     LCD_DATA(' ');	
 	     LCD_DATA(' ');			 
+	     delay_Ms(500);
 	     LCD_command(0xC0);                         // Set cursor location to write in second line
 	     LCD_DATA(' ');
              LCD_DATA(' ');
@@ -87,8 +90,5 @@ int main(void)
 		
 	     dist = distance_calc();
 	       
-    } while ((GPIO_PORTF_DATA_R &= 0x01) != 1);
-
-	
-	
+    } while ((GPIO_PORTF_DATA_R &= 0x01) != 1)	
  }
