@@ -1,0 +1,6 @@
+Dependencies for Project 'FirstMilestone', Target 'Target 1': (DO NOT MODIFY !)
+F (.\FirstMilestone.c)(0x60BCF8D5)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I..\TExaSware-I "C:\Users\user\Desktop\Embedded Project 21\keil\ARM\RV31\INC"-I "C:\Users\user\Desktop\Embedded Project 21\keil\ARM\CMSIS\Include"-I "C:\Users\user\Desktop\Embedded Project 21\keil\ARM\Inc\TI\TM4C123"-DTM4C123GH6PM-o .\firstmilestone.o --omf_browse .\firstmilestone.crf --depend .\firstmilestone.d)
+I (..\TExaSware\tm4c123gh6pm.h)(0x51D45492)
+I (C:\Users\user\Desktop\Embedded Project 21\keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (C:\Users\user\Desktop\Embedded Project 21\keil\ARM\ARMCC\include\math.h)(0x51C819B4)
+F (..\startup_TM4C123.s)(0x532C4792)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Users\user\Desktop\Embedded Project 21\keil\ARM\RV31\INC"-I "C:\Users\user\Desktop\Embedded Project 21\keil\ARM\CMSIS\Include"-I "C:\Users\user\Desktop\Embedded Project 21\keil\ARM\Inc\TI\TM4C123"--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
