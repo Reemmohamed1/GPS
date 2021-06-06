@@ -31,7 +31,7 @@ void LCD_Init (void)
  }
 void portf_init (void)
  {
-	 GPIO_PORTF_LOCK_R = 0x4C4F434B;              // Unlock PORTF
+   GPIO_PORTF_LOCK_R = 0x4C4F434B;              // Unlock PORTF
    GPIO_PORTF_CR_R |= 0x03;                     // Enable Changing in PORTF Pins 
    GPIO_PORTF_AMSEL_R &= ~0x03;                 // Disable Analoge on PF0,PF1
    GPIO_PORTF_AFSEL_R &= ~0x03;                 // Needn't Func. Selection on PF0,PF1
