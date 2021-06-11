@@ -15,7 +15,7 @@ SYSCTL_RCGCGPIO_R |= 0x10; //Activate port A
 UART5_CTL_R = 0x0; //Disable UART
 UART5_IBRD_R = 104; //IBRD = int(16000000/(16*9600))=int(104.16666)
 UART5_FBRD_R = 11; //FBER = round(0.16666*0.64)
-UART5_LCRH_R = 0x60; //8 bit length ,enablefifo,1-stop bit 
+UART5_LCRH_R = 0x70; //8 bit length ,enablefifo,1-stop bit 
 UART5_CTL_R = 0x301; //enable control registers , RXE,TXE
 GPIO_PORTE_AFSEL_R =0x30; //use ports A0 and A1 alternate functions
 GPIO_PORTE_PCTL_R = 0x00110000; //configure ports A0 and A1 for uart
