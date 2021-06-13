@@ -208,10 +208,15 @@ double distance_calc (double lat12, double lon12)
  }
 
 int main(){
+	portf_init();
+	LCD_Init();
 	int dist = 0;
 	double latitude = 0, longitude = 0; 
 	getco(latitude , longitude);
         dist = (int) (distance_calc(latitude,longitude));
+	
+	     LCD_command(1);                           // clear LCD
+             LCD_command(0x80);                        // Set cursor location to write in first line 
              LCD_DATA('D');
 	     LCD_DATA('I');
 	     LCD_DATA('S');
@@ -223,5 +228,6 @@ int main(){
 	     LCD_DATA('=');
 	     LCD_printInt(dist);
 	     delay_Ms(1000);
+	
 }
 
