@@ -178,7 +178,7 @@ int main(void)
 	       readGPSModule();
             dist = distance_calc();
              led_on (dist);
-    } while ((GPIO_PORTF_DATA_R &= 0x01) != 1);
+    } while ((GPIO_PORTF_DATA_R & 0x01) != 1)
 	}
 
 	double distance_calc (void)
