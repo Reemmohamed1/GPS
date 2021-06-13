@@ -1,5 +1,7 @@
 #include "tm4c123gh6pm.h"
 #include "stdint.h"
+#include "stdint.h"
+#include "stdlib.h"
   
 void SystemInit() {}
 
@@ -55,9 +57,9 @@ int main(){
 	double num4 =0;           //temp, num1, num2, num3 & num4 are just temporary used to calculate the final latitude and longotude that will be used in the distance calculation.
 	double latfinal =0;       //To store the final latitude.
 	double lonfinal =0;       //To store the final longitude.
-	char latw[]={'l','a','t','=',' '};
+	char latword[]={'l','a','t','=',' '};
 	char space=' ';
-	char lonw[]={'l','o','n','=',' '};
+	char lonword[]={'l','o','n','=',' '};
 	UART0_Init();
         UART5_Init();
 
@@ -99,24 +101,23 @@ int main(){
 
         //The following loops is just to print the output on a serial monitor, we're using Putty program to show the results.
         //Printing "lat=" and then the lat number.
-        for(i=0;i<=sizeof(latw);i++){ 
-		UART0_write(latw[i]); 
+        for(i=0;i<=sizeof(latword);i++){ 
+		UART0_write(latword[i]); 
 	}
 	for(i=0;i<=sizeof(lat);i++){ 
 		UART0_write(lat[i]); 
 	} 
         //Printing space between the words lat and lon.
-	for(i=0;i<=4;i++){ 
+	for(i=0;i<=6;i++){ 
 		UART0_write(space); 
 	}
         //Printing "lon=" and then the lon number.
-        for(i=0;i<=sizeof(lonw);i++){ 
-		UART0_write(lonw[i]); 
+        for(i=0;i<=sizeof(lonword);i++){ 
+		UART0_write(lonword[i]); 
 	}
         for(i=0;i<=sizeof(lon);i++){ 
 		UART0_write(lon[i]); 
 	}	
-	UART0_write('\n');
         // getting final lat
 
 	for (i=0;i<2;i++){temp[i]=lat[i];}
