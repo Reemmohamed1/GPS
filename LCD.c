@@ -44,3 +44,26 @@ void LCD_DATA(unsigned char data)
    GPIO_PORTA_DATA_R = 0x00;                     // Low Pulse on E 
     delay_Us(40);
  }
+
+void LCD_printInt(int no)
+{
+  char toprint[4] = {0};
+  sprintf(toprint, "%d", no);
+
+  while(toprint[l] != '\0')
+  {
+    LCD_DATA(toprint[l]);
+    l++;
+  }
+}
+int k = 0;
+void LCD_printString(char* str)
+{
+  LCD_command(0x0C);
+  
+  while (str[k] != '\0')
+  {
+    LCD_DATA(str[k]);
+    k++;
+  }
+}
