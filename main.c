@@ -115,7 +115,6 @@ void getco(double a, double b){
 	char lon[]="";
 	char input[] = " " ;
 	int i=0;
-	char toprint[4] = {0};
 	char temp[]=" ";
 	int num1 = 0;
 	int num2 = 0;
