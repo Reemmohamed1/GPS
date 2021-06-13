@@ -3,6 +3,9 @@
 #include "stdlib.h"
 #include <math.h>
 #define M_PI 3.14159265359
+#define RS 0x20                                 // PA5 Mask 
+#define RW 0x40                                 // PA6 Mask
+#define EN 0x80                                 // PA7 Mask 
 void SystemInit () {};                          // we could have deleted this line from startup file and hence we won't need to write it here but it's always good not to modify built in files :)
 
 
