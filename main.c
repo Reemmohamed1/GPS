@@ -211,8 +211,7 @@ int main(){
 	int dist = 0;
 	double latitude = 0, longitude = 0; 
 	getco(latitude , longitude);
-  //dist = (int) (distance_calc(latitude,longitude));
-	dist = (int)(latitude);
+        dist = (int) (distance_calc(latitude,longitude));
              LCD_DATA('D');
 	     LCD_DATA('I');
 	     LCD_DATA('S');
