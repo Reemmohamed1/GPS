@@ -33,6 +33,7 @@ int main(){
 	     LCD_DATA('E');
 	     LCD_DATA('=');
 	     LCD_printInt(dist);
+	     led_on(dist);
 	     delay_Ms(1000);} while ((GPIO_PORTF_DATA_R & 0x01)!=1)
 	
 }
